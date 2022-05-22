@@ -1,7 +1,11 @@
 function compute()
 {
-    // extracting principal value
+    // extracting values
     var principal = document.getElementById("principal").value;
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
+    var result = document.getElementById("result")    
+    result.innerText=""
 
     // throwing out an alert if the principal is entered incorrectly
     if((principal=="") || (principal<=0)){
@@ -10,9 +14,6 @@ function compute()
         return false;
     }
 
-    // extracting rate and years
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
     
     // calculating interest
     var interest = principal * years * rate / 100;
@@ -20,8 +21,7 @@ function compute()
     // calculating the future year
     var year = new Date().getFullYear() + parseInt(years);
 
-    // displaying the result
-    var result = document.getElementById("result")
+
     result.innerText="If you deposit "+principal+",\nat an interest rate of "
     +rate+"%\nYou will receive an amount of "+interest+",\nin the year "
     +year+"\n\n"
