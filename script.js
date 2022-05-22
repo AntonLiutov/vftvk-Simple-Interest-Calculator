@@ -24,7 +24,7 @@ function compute()
     var result = document.getElementById("result")
     result.innerText="If you deposit "+principal+",\nat an interest rate of "
     +rate+"%\nYou will receive an amount of "+interest+",\nin the year "
-    +year
+    +year+"\n\n"
 
     return true
 
